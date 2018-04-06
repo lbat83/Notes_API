@@ -8,7 +8,7 @@ using Notes_API.Entities;
 
 namespace Notes_API.Controllers
 {
-    [Produces("application/json")]
+    
     [Route("api/User")]
     public class UserController : Controller
     {
