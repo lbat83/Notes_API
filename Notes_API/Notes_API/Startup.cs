@@ -43,9 +43,8 @@ namespace Notes_API
                                           .AllowCredentials());
             app.UseMvc(routes =>
             {
-                routes.MapRoute(
-            name: "default",
-            template: "{controller=Notes}");
+                routes.MapRoute("Notes", "notes",
+               defaults: new { controller = "Notes"});
             });
         }
     }
