@@ -9,7 +9,7 @@ using Notes_API.Entities;
 namespace Notes_API.Controllers
 {
     
-    [Route("api/Notes")]
+    [Route("api/[controller]")]
     public class NotesController : Controller
     {
         private readonly NotesContext _context;
