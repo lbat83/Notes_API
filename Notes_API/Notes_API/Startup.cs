@@ -41,7 +41,12 @@ namespace Notes_API
                                           .AllowAnyHeader()
                                           .AllowAnyMethod()
                                           .AllowCredentials());
-            app.UseMvc();
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+            name: "default",
+            template: "{controller=Notes}");
+            });
         }
     }
 }
