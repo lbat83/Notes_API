@@ -37,7 +37,7 @@ namespace Notes_API
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(builder => builder.AllowAnyOrigin()
+            app.UseCors(builder => builder.WithOrigins("https://lbnotes.azurewebsites.net")
                                           .AllowAnyHeader()
                                           .AllowAnyMethod()
                                           .AllowCredentials());
