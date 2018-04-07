@@ -37,15 +37,17 @@ namespace Notes_API
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseCors(builder => builder.WithOrigins("https://lbnotes.azurewebsites.net")
-                                          .AllowAnyHeader()
-                                          .AllowAnyMethod()
-                                          .AllowCredentials());
             app.UseMvc(routes =>
             {
                 routes.MapRoute("Notes", "notes",
                defaults: new { controller = "Notes"});
             });
+            
+            app.UseCors(builder => builder.WithOrigins("https://lbnotes.azurewebsites.net")
+                                          .AllowAnyHeader()
+                                          .AllowAnyMethod()
+                                          .AllowCredentials());
+            
         }
     }
 }
